@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+body #progress {
+  margin-top: 0px;
+  z-index: 10000;
+  border-radius: 0;
+  height: 4px;
+}
+body #navbarContent {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 13px;
+}
+button {
+  text-transform: uppercase;
+  font-weight: 700;
+  background: none;
+  color: #00e0d0;
+  padding: 15px 15px;
+  border: 2px solid #00e0d0;
+}
+/*============    MAIN    ===========*/
+header {
+  background: #2e274f;
+}
+header .navbar {
+  background: transparent;
+  box-shadow: none;
+}
+header #main {
+  background: #332a54 url("../img/mainbg.png") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+}
+header #main .main_info {
+  padding-top: 230px;
+}
+header #main .main_info h1 {
+  padding-bottom: 55px;
+}
+header #main .main_info p {
+  padding-bottom: 50px;
+}
+/*============    STORY   ===========*/
+.story {
+  padding-top: 70px;
+}
+.story .triangle_img {
+  margin-top: 70px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.story .story_text button {
+  margin-bottom: 70px;
+}
+/*============    watch    ===========*/
+.watch_story .watch_video {
+  color: white;
+  text-transform: uppercase;
+  background: url("../img/bg2.png") no-repeat center center;
+  background-size: cover;
+}
+.watch_story .watch_video img {
+  padding-top: 200px;
+  padding-bottom: 30px;
+  cursor: pointer;
+}
+.watch_story .watch_video h3 {
+  padding-bottom: 200px;
+}
+/*============    expertise    ===========*/
+.expertise {
+  padding-top: 70px;
+}
+.expertise .card {
+  padding: 40px 30px;
+  box-shadow: none;
+  border-radius: 0;
+}
+.expertise .card img {
+  padding-bottom: 30px;
+}
+.expertise .card h4 {
+  padding-bottom: 20px;
+}
+/*============    mans    ===========*/
+.mans {
+  color: white;
+  background: #382d56 url("../img/bg3.png") no-repeat center bottom;
+  background-size: cover;
+}
+.mans .section_tittle-dark {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.mans .wrapper {
+  border: 1px solid white;
+  margin-bottom: 70px;
+}
+.mans .wrapper img {
+  width: 100%;
+}
+.mans .wrapper .wrapper_text {
+  margin-top: 16px;
+}
+.mans .section_footer-dark {
+  padding-bottom: 30px;
+}
+/*============    ШРИФТЫ    ===========*/
+/*============    ШРИФТЫ    ===========*/
+/*============    ШРИФТЫ    ===========*/
+/*============    ШРИФТЫ    ===========*/
+/*============    ШРИФТЫ    ===========*/
+/*============    ШРИФТЫ    ===========*/
+/*============    ПОДВАЛ    ===========*/
+/*============    	ВСПЛЫВАЮЩИЕ ОКНА    ===========*/
+/*============    	АДАПТИВ    ===========*/
+@media (min-width: 0px) and (max-width: 320px) {
+  .main {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  header .navbar {
+    background-color: #261748;
+  }
+  .story {
+    padding-top: 20px;
+  }
+  header #main .main_info {
+    padding-top: 150px;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  header .navbar {
+    background-color: #261748;
+  }
+  .main {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .story {
+    padding-top: 0px;
+  }
+  .story .triangle_img {
+    margin-top: 50px;
+  }
+  header #main .main_info {
+    padding-top: 200px;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  header .navbar {
+    background-color: #261748;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  header .navbar {
+    background-color: #261748;
+  }
+}
