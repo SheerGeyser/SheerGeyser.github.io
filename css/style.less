@@ -1,187 +1,35 @@
-body {
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
-
-    #progress {
-        margin-top: 0px;
-        z-index: 10000;
-        border-radius: 0;
-        height: 4px;
-        // box-shadow: 0px 4px 5px 0px green;
-    }
-
-    #navbarContent {
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 13px;
-    }
-
 }
-
-
-button {
-    text-transform: uppercase;
-    font-weight: 700;
-    background: none;
-    color: #00e0d0;
-    padding: 15px 15px;
-    border: 2px solid #00e0d0;
-}
-
-
-/*============    MAIN    ===========*/
-header {
-    background: #2e274f;
-
-
-    .navbar {
-        background: transparent;
-        box-shadow: none;
-    }
-
-
-
-    #main {
-        background: #332a54 url("../img/mainbg.png") no-repeat center center;
-        background-size: cover;
-        height: 100%;
-        color: #fff;
-
-
-
-        .main_info {
-            display: inline-block;
-            padding-top: 25%;
-
-            h1 {
-                padding-bottom: 5%;
-            }
-
-            p {
-                padding-bottom: 5%;
-            }
-
-            button {
-                margin-bottom: 20%;
-            }
-
-        }
-    }
-}
-
-/*============    STORY   ===========*/
-.story {
-    padding-top: 70px;
-
-    .triangle_img {
-        margin-top: 70px;
-        text-align: center;
-        margin-bottom: 50px;
-
-    }
-
-    .story_text {
-        button {
-            margin-bottom: 70px;
-        }
-    }
-}
-
-/*============    watch    ===========*/
-.watch_story {
-    .watch_video {
-        color: white;
-        text-transform: uppercase;
-        background: url("../img/bg2.png") no-repeat center center;
-        background-size: cover;
-
-
-        img {
-            padding-top: 200px;
-            padding-bottom: 30px;
-            cursor: pointer;
-        }
-
-        h3 {
-            padding-bottom: 200px;
-        }
-    }
-}
-
-/*============    expertise    ===========*/
-.expertise {
-    padding-top: 70px;
-
-    .shadow_card {}
-
-    .last_shadow {}
-
-    .card {
-        padding: 40px 30px;
-        box-shadow: none;
-        border-radius: 0;
-
-        img {
-            padding-bottom: 30px;
-        }
-
-        h4 {
-            padding-bottom: 20px;
-        }
-    }
-
-}
-
-
-/*============    mans    ===========*/
-.mans {
-    color: white;
-    background-size: cover;
-
-    background: #382d56 url("../img/bg3.png") no-repeat center bottom;
-    background-size: cover;
-
-
-    .section_tittle-dark {
-        padding-top: 70px;
-        padding-bottom: 70px;
-    }
-
+/*============    /start   ===========*/
+body{
+    background-color: grey;
     .wrapper {
-        border: 1px solid white;
-        margin-bottom: 70px;
-
-        img {
-            width: 100%;
-        }
-
-        .wrapper_text {
-            margin-top: 16px;
-        }
+        display: flex;
+        align-items: stretch;
     }
-
-    .section_footer-dark {
-        padding-bottom: 30px;
-
+    
+    #sidebar {
+        min-width: 250px;
+        max-width: 250px;
+    }
+    
+    #sidebar.active {
+        margin-left: -250px;
     }
 }
 
-/*============    ШРИФТЫ    ===========*/
 
-/*============    ШРИФТЫ    ===========*/
 
-/*============    ШРИФТЫ    ===========*/
 
-/*============    ШРИФТЫ    ===========*/
 
-/*============    ШРИФТЫ    ===========*/
 
-/*============    ШРИФТЫ    ===========*/
 
-/*============    ПОДВАЛ    ===========*/
 
-/*============    	ВСПЛЫВАЮЩИЕ ОКНА    ===========*/
+
+
+
 
 
 
@@ -189,97 +37,31 @@ header {
 
 
 /*============    	АДАПТИВ    ===========*/
-@media screen and (min-width: 0px) and (max-height: 700px) {
-    header {
-        .main_info {
-
-            padding-top: 100px;
-
-            h1 {
-                padding-bottom: 55px;
-            }
-
-            p {
-                padding-bottom: 50px;
-            }
-
-        }
-    }
-}
-
 
 @media(min-width:0px) and (max-width:320px) {
-    .main {
-        padding-right: 0px;
-        padding-left: 0px;
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-
-    header .navbar {
-        background-color: #261748;
-    }
-
-    .story {
-        padding-top: 20px;
-    }
-
-    header #main .main_info {
-        padding-top: 25%
-    }
+	
 }
 
 @media(min-width:321px) and (max-width:480px) {
-    header .navbar {
-        background-color: #261748;
-    }
-
-    .main {
-        padding-right: 0px;
-        padding-left: 0px;
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-
-    .story {
-        padding-top: 0px;
-
-        .triangle_img {
-            margin-top: 50px;
-
-        }
-    }
-
-    header #main .main_info {
-        padding-top: 25%
-    }
-
-    // #progress {
-    //     margin-top: 37px;
-    // }
+	
 }
 
 @media(min-width:481px) and (max-width:768px) {
-    header .navbar {
-        background-color: #261748;
-    }
-
-    header #main .main_info {
-        padding-top: 25%
-    }
-
+	
 }
 
 @media(min-width:769px) and (max-width:992px) {
-    header .navbar {
-        background-color: #261748;
-    }
-
-    // #progress {
-    //     margin-top: 38px;
-    // }
+	
 }
 
-@media(min-width:993px) and (max-width:1200px) {}
+@media(min-width:993px) and (max-width:1200px) {
+	
+}
 
-@media(min-width:1201px) {}
+@media print {
+    .hidden-print {
+      display: none !important;
+    }
+  }
+
+
