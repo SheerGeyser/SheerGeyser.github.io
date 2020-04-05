@@ -33,28 +33,6 @@
             }
         }
     </script>
-	<script>
-	(function(x){
-    (function(f){
-        (function a(){
-            try {
-                function b(i) 
-                {
-                    if ((''+(i/i)).length !== 1 || i % 20 === 0) {
-                        (function(){}).constructor('debugger')();
-                    } else {
-                        debugger;
-                    }
-                    b(++i);
-                }
-                b(0);
-            } catch(e) {
-                f.setTimeout(a, x)
-            }
-        })()
-    })(document.body.appendChild(document.createElement('frame')).contentWindow);
-})
-	</script>
 </body>
 
 </html>
