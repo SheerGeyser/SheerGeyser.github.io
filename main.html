@@ -66,14 +66,14 @@
 
 
 
-  <section id="content">
+  <section id="content" style="padding-bottom: 0px;">
 
 
     <div class="toPrint">
 
 
 
-      <div class="a4" id="doc1" style="display: none;">
+      <div class="a4" id="doc1" style="display: none; margin-bottom: 0px;">
         <P LANG="ru-RU" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in">
           <FONT COLOR="#0000ff">
             <FONT COLOR="#000000">
@@ -92,7 +92,8 @@
           <BR>
         </P>
         <P LANG="ru-RU" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in">
-          <FONT SIZE=3>от «<input type="text" class="textInput" style="width: 15px;">» <input class="textInput" style="width: 100px; position: relative; text-align: center;" type="month">г.</FONT>
+          <FONT SIZE=3>от «<input type="text" class="textInput" style="width: 15px;">» <input class="textInput"
+              style="width: 100px; position: relative; text-align: center;" type="month">г.</FONT>
         </P>
         <P LANG="ru-RU" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in">
           <BR>
@@ -362,10 +363,12 @@
         <P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0in"><BR>
         </P>
         <P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0in; line-height: 150%">
-          <FONT SIZE=3><I>Всего оказано услуг на сумму: <input class="textInput" style="text-align: right;"> рублей <input class="textInput" style="text-align: right; width: 30px;"> коп.,</I></FONT>
+          <FONT SIZE=3><I>Всего оказано услуг на сумму: <input class="textInput" style="text-align: right;"> рублей
+              <input class="textInput" style="text-align: right; width: 30px;"> коп.,</I></FONT>
         </P>
         <P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0in">
-          <FONT SIZE=3><I>в т.ч. НДС – <input class="textInput" style="text-align: right;"> рублей<input class="textInput" style="text-align: right; width: 30px;"> копеек.</I>
+          <FONT SIZE=3><I>в т.ч. НДС – <input class="textInput" style="text-align: right;"> рублей<input
+                class="textInput" style="text-align: right; width: 30px;"> копеек.</I>
           </FONT>
         </P>
         <P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0in"><BR>
@@ -392,7 +395,109 @@
       </div>
 
 
-
+      <div class="a4" id="doc2" style="display: none;">
+        <h2 style="text-align: center;font-size: 1.2em;font-weight: bold;">
+          Договор поставки</h2>
+        <p>&nbsp;</p>
+        <div class="d-flex" style="justify-content: space-between;">
+          <p>г. <input type="text" class="textInput" style="width: 80px; text-align: center;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';"></p>
+          
+          <p>"<input type="text" class="textInput" style="width: 25px; text-align: center;">"<input class="textInput" style="width: 100px; position: relative; text-align: center;" type="month">г.</p>
+        </div>
+        <br>
+        <p>
+          Предприятие <input type="text" class="textInput" style="width: 80px; text-align: center;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';">, именуемое в дальнейшем Поставщик, в лице <input type="text" class="textInput" style="width: 80px; text-align: center;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';">, действующего на
+          основании Устава предприятия, с одной стороны и <input type="text" class="textInput" style="width: 80px; text-align: center;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';">, именуемое в дальнейшем Покупатель в лице
+          <input type="text" class="textInput" style="width: 80px; text-align: center;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';">, действующего на основании Устава предприятия, с другой стороны, заключили настоящий договор о
+          нижеследующем:</p>
+        <br>
+        <h3 align="center">
+          I. Наименование и количество поставляемой продукции</h3>
+        <p>
+          1. На основании согласованного графика поставок от <input type="text" class="textInput" style="width: 80px; text-align: center;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';"> "Поставщик" обязуется изготовить и поставить в
+          20<input type="text" class="textInput" style="width: 20px; text-align: center;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';">г., а "Заказчик" принять и оплатить <input type="text" class="textInput" style="width: 80px; text-align: center;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';">(наименование изделия) в количестве и сроки согласно
+          графику, приложенному к настоящему договору и являющемуся его неотъемлемой частью.</p>
+        <p>
+          2. Поставщик, по согласованию с Заказчиком, имеет право досрочно отгрузить изделия. Продукция, поставленная
+          досрочно, засчитывается в счет изделий, подлежащих поставке в следующем сдаточном периоде.</p>
+        <br>
+        <h3 align="center">
+          II. Качество и комплектность.</h3>
+        <p>
+          1. Поставляемая продукция по своему качеству должна соответствовать <input type="text" class="textInput" style="width: 80px; text-align: center;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';"> (наименование
+          ГОСТов, ОСТа, технических условий, технических образцов, описаний), утвержденных <input type="text" class="textInput" style="width: 80px; text-align: center;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';"> (наименование
+          органа, утвердившего ТУ, ТО, дата утверждения).</p>
+        <br>
+        <h3 align="center">
+          III. Цены и сумма договора.</h3>
+        <p>
+          1. Поставляемая по настоящему договору продукция оплачивается по ценам прейскуранта N<input type="text" class="textInput" style="width: 80px; text-align: center;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';">, утвержденного
+          <input type="text" class="textInput" style="width: 80px; text-align: center;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';"> (наименование органа, утвердившего прейскурант, дата утверждения) по согласованной цене
+          <input type="text" class="textInput" style="width: 80px; text-align: center;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';"> (размер цены, дата и номер протокола согласования) со сроком действия до <input type="text" class="textInput" style="width: 80px; text-align: center;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';">.</p>
+        <p>
+          2. Тара и упаковка в цену поставляемых изделий не входят и оплачиваются Заказчиком согласно прейскуранту.</p>
+        <p>
+          3. Сумма поставки по настоящему договору составляет <input type="text" class="textInput" style="width: 80px; text-align: center;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';"> руб.<input type="text" class="textInput" style="width: 80px; text-align: center;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';">коп.</p>
+        <br>
+      </div>
+      <div class="a4" id="doc3" style="display: none; margin-bottom: 0px;">
+        <h3 align="center">
+          IV. Порядок отгрузки</h3>
+        <p>
+          1. Отгрузка <input type="text" class="textInput" style="width: 80px; text-align: center;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';"> (наименование изделий) производится <input type="text" class="textInput" style="width: 80px; text-align: center;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';"> (водным, железнодорожным, авиа)
+          транспортом <input type="text" class="textInput" style="width: 80px; text-align: center;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';"> (в вагонах, контейнерах) грузовой скоростью. Поставка продукции одногородним
+          получателям осуществляется в порядке централизованной доставки автомобильным транспортом.</p>
+        <p>
+          2. Минимальной нормой отгрузки является <input type="text" class="textInput" style="width: 80px; text-align: center;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';">.</p>
+        <br>
+        <h3 align="center">
+          V. Тара и упаковка</h3>
+        <p>
+          1. Продукция должна упаковываться в <input type="text" class="textInput" style="width: 50px; text-align: center;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';"> тару, отвечающую требованиям ГОСТов или технических условий и
+          обеспечивающую сохранность продукции при перевозке и хранении.</p>
+        <br>
+        <h3 align="center">
+          VI. Порядок расчетов</h3>
+        <p>
+          1. Расчеты за поставляемую продукцию производятся путем <input type="text" class="textInput" style="width: 80px; text-align: center;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';"> (изложить порядок).</p>
+        <br>
+        <h3 align="center">
+          VII. Срок действия договора</h3>
+        <p>
+          1. Настоящий договор вступает в силу с <input type="text" class="textInput" style="width: 80px; text-align: center;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';"> 20<input type="text" class="textInput" style="width: 20px; text-align: center;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';">г. и действует по <input type="text" class="textInput" style="width: 80px; text-align: center;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';">20<input type="text" class="textInput" style="width: 20px; text-align: center;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';">г.</p>
+        <br>
+        <h3 align="center">
+          VIII. Дополнительные условия</h3>
+        <p>
+          1. Заказчик обязан для изготовления изделий в срок <input type="text" class="textInput" style="width: 80px; text-align: center;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';"> оформить передачу "Поставщику" фондов на <input type="text" class="textInput" style="width: 80px; text-align: center;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';">
+          (наименование сырья) или отгрузить <input type="text" class="textInput" style="width: 80px; text-align: center;" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';"> (наименование сырья) наличия в сроки, ассортименте и количестве
+          согласно прилагаемой к договору спецификации, которая является его неотъемлемой частью.</p>
+        <p>
+          2. Во всем остальном, что не предусмотрено настоящим договором, стороны руководствуются законодательством РФ.
+        </p>
+        <br>
+        <h3 align="center">
+          IX. Юридические адреса, платежные и отгрузочные реквизиты сторон:</h3>
+        <div style="display: flex; justify-content: space-between;">
+          <div>
+            <p>"Поставщик"</p>
+            <p><input type="text" class="textInput" width="28px"></p>
+            <p><input type="text" class="textInput" width="28px"></p>
+            <br>
+            <p><input type="text" class="textInput" style="width: 120px;">"Поставщик"</p>
+            <p align="center">М.П.</p>
+          </div>
+          <div>
+            <p>"Заказчик"</p>
+            <p><input type="text" class="textInput" width="28px"></p>
+            <p><input type="text" class="textInput" width="28px"></p>
+            <br>
+            <p><input type="text" class="textInput" style="width: 120px;">"Заказчик"</p>
+            <p align="center">М.П.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 
@@ -413,17 +518,17 @@
 
 
   <script>
-     function showDoc1() {
-            document.getElementById('doc1').style.display="block";
-            document.getElementById('doc2').style.display="none";
-            document.getElementById('doc3').style.display="none";
-     }
+    function showDoc1() {
+      document.getElementById('doc1').style.display = "block";
+      document.getElementById('doc2').style.display = "none";
+      document.getElementById('doc3').style.display = "none";
+    }
 
-     function showDoc2() {
-            document.getElementById('doc1').style.display="none";
-            document.getElementById('doc2').style.display="block";
-            document.getElementById('doc3').style.display="none";
-     }
+    function showDoc2() {
+      document.getElementById('doc1').style.display = "none";
+      document.getElementById('doc2').style.display = "block";
+      document.getElementById('doc3').style.display = "block";
+    }
   </script>
 
   <script>
@@ -505,7 +610,7 @@
     // ]]>
   </script>
 
-  
+
 </body>
 
 </html>
