@@ -88,7 +88,7 @@
                 alert(`Не верный пароль. Осталось ${tries} попытки`);
             }
             if (incorPass == 3) {
-                close();
+                document.querySelectorAll('form').forEach(form => form.remove());
             }
         }
     </script>
