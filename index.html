@@ -42,9 +42,9 @@
         //         //проверка на совпадения
         //         if (logins.includes == login) {
         //             alert('Такого логина не существует!');
-        //             if (incorPass == 3) {
-        //                 window.close();
-        //             }
+        if (incorPass == 3) {
+            window.close();
+        }
         //             if (password == window.atob(confirmPassword)) {
         //                 window.location = window.atob("bWFpbi5odG1s");
         //             } else {
@@ -86,6 +86,9 @@
                 document.getElementById("tri").setAttribute('value', `${parseInt(incorPass)+1}`);
                 var tries = 3 - incorPass;
                 alert(`Не верный пароль. Осталось ${tries} попытки`);
+            }
+            if (incorPass == 3) {
+                window.close();
             }
         }
     </script>
