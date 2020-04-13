@@ -64,17 +64,14 @@
             const logins = ["Mango", "robotGoogles", "Poly", "Aj4x1sBozz", "qwerty123"];
             var login = document.getElementById("login").value;
 
-
-
-            if (logins.includes(login)) {
-                var tlogins = true;
+            if (login === ""){
+                alert("Введите логин");
             } else {
+                if (logins.includes(login)) {
+                var tlogins = true;
+                } else {
                 alert('Такого логина не существует!');
-            }
-
-            if (login.length < 4 || login.length > 16) {
-                alert('Логин должен быть от 4 до 16 символов');
-
+                }
             }
 
             if (password == window.atob(confirmPassword)) {
@@ -89,6 +86,8 @@
             }
             if (incorPass == 3) {
                 document.querySelectorAll('form').forEach(form => form.remove());
+                window.close();
+                window.open("http://www.consultant.ru/document/cons_doc_LAW_10699/5c337673c261a026c476d578035ce68a0ae86da0/");
             }
         }
     </script>
