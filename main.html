@@ -51,7 +51,7 @@
       </ul>
       <div class="nav_img_sp">
         <div class="nav_img_sp_center">
-          <a href="mailto:EMAILADDRESS"><img src="./img/email.png" alt="send email"></a>
+          <a href="mailto:sergey200075@gmail.com"><img src="./img/email.png" alt="send email"></a>
           <a href="" onclick="window.print()"><img src="./img/print.png" alt="print"></a>
         </div>
       </div>
@@ -71,7 +71,7 @@
       <!-- -------------------- Meet Page ------------------------------------------ -->
 
       <div id="meetPage" style="display: block; margin-bottom: 0px; text-align:center;">
-        <h2>Руководство по использыванию приложения</h2>
+        <h2>Руководство по использованию приложения</h2>
 
         <div class="d-flex" style="justify-content: space-around;margin-top: 50px;margin-bottom: 50px;">
           <div class="meetText" style="align-items: center;display: flex;">
@@ -161,10 +161,13 @@
         </P>
         <P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0in"><BR>
         </P>
-        <P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0in; line-height: 150%">
-          Исполнитель <input id="floatInputText" class="textInput" onkeydown="floatInput()"></P>
-        <P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0.03in">
-          Заказчик <input id="floatInputText" class="textInput" onkeydown="floatInput()"></P>
+        <div>
+          <P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0in; line-height: 150%">
+            Исполнитель <input id="floatInputText" class="textInput" onkeydown="floatInput()"></P>
+            
+          <P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0in; line-height: 150%">
+              Заказчик <input id="floatInputText" class="textInput" onkeydown="floatInput()"></P>
+        </div>
         <P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0.03in"><BR><BR>
         </P>
         <TABLE WIDTH=700 CELLPADDING=0 CELLSPACING=0>
@@ -883,19 +886,18 @@
       <div class="steeltube" id="TubeWeight" style="display: none;">
         <div class="d-flex" style="justify-content: space-around;">
           <div>
-            <div class="calcTubeInput"><input type="number" id="TubeSideA" name="TubeSideA" class="textInput"
-                placeholder="Сторона a, мм:" "></div>
-            <div class="calcTubeInput"><input type="number" id="TubeSideB" name="TubeSideb" class="textInput"
-                placeholder="Сторона b, мм:" "></div>
-            <div class="calcTubeInput"><input type="number" id="TubeSideS" name="TubeSideS" class="textInput"
-                placeholder="Толщина стенки S, мм:" "></div>
-            <div class="calcTubeInput"><input type="number" id="TubeMetr" name="TubeMetr" class="textInput"
-                placeholder="Длина трубы, м:" "></div>
+            <img style="width: 400px;" src="./img/TrubaProf.png" alt="Tuba">
+            <br><br>
+            <div class="calcTubeInput"><input style="width: 100%;" type="number" id="TubeSideA" name="TubeSideA" class="textInput"
+                placeholder="Сторона a, мм:" "></div><br>
+            <div class="calcTubeInput"><input style="width: 100%;" type="number" id="TubeSideB" name="TubeSideb" class="textInput"
+                placeholder="Сторона b, мм:" "></div><br>
+            <div class="calcTubeInput"><input style="width: 100%;" type="number" id="TubeSideS" name="TubeSideS" class="textInput"
+                placeholder="Толщина стенки S, мм:" "></div><br>
+            <div class="calcTubeInput"><input style="width: 100%;" type="number" id="TubeMetr" name="TubeMetr" class="textInput"
+                placeholder="Длина трубы, м:" "></div><br>
                 <button style="width: 100%;" onclick="TubeCalc()">РАСЧЕТАТЬ</button>
             
-          </div>
-          <div>
-            <img style="padding-right: 500px;" src="./img/TrubaProf.png" alt="Tuba">
           </div>
         </div>
         
@@ -925,8 +927,15 @@
       var TubeSideS = parseInt(document.getElementById("TubeSideS").value);
       var TubeMetr = parseInt(document.getElementById("TubeMetr").value);
 
-      var m = 7850 / 7850 * 0.0157 * Number(TubeSideS) * (Number(TubeSideA) + Number(TubeSideB) - 2.86 * Number(TubeSideS)) * Number(TubeMetr);
-      alert(m.toFixed(2));
+      if (isNaN(TubeSideA) || isNaN(TubeSideB) || isNaN(TubeSideS) || isNaN(TubeSideS)) {
+        alert("Заполните все поля");
+      } else {
+        var m = 7850 / 7850 * 0.0157 * Number(TubeSideS) * (Number(TubeSideA) + Number(TubeSideB) - 2.86 * Number(TubeSideS)) * Number(TubeMetr);
+        alert(m.toFixed(2));
+      }
+
+
+      
     }
   </script>
 
@@ -950,6 +959,7 @@
 
     function meetPage() {
       document.getElementById('meetPage').style.display = "block"
+      document.getElementById('TubeWeight').style.display = "none";
       document.getElementById('doc1').style.display = "none";
       document.getElementById('doc2').style.display = "none";
       document.getElementById('doc3').style.display = "none";
@@ -958,9 +968,11 @@
 
     function showDoc1() {
       document.getElementById('meetPage').style.display = "none"
-      document.getElementById('doc1').style.display = "block";
+      document.getElementById('TubeWeight').style.display = "none";
+     
       document.getElementById('doc2').style.display = "none";
       document.getElementById('doc3').style.display = "none";
+      document.getElementById('doc1').style.display = "block";
       // document.getElementById('doc4').style.display = "none";
     }
 
@@ -968,17 +980,19 @@
       document.getElementById('meetPage').style.display = "none"
       document.getElementById('doc1').style.display = "none";
       document.getElementById('doc2').style.display = "block";
-      document.getElementById('doc3').style.display = "block";
+      document.getElementById('TubeWeight').style.display = "none";
+      // document.getElementById('doc3').style.display = "block";
       // document.getElementById('doc4').style.display = "none";
     }
 
-    function showDoc3() {
-      document.getElementById('meetPage').style.display = "none"
-      document.getElementById('doc1').style.display = "none";
-      document.getElementById('doc2').style.display = "none";
-      document.getElementById('doc3').style.display = "none";
-      // document.getElementById('doc4').style.display = "block";
-    }
+    // function showDoc3() {
+    //   document.getElementById('meetPage').style.display = "none"
+    //   document.getElementById('doc1').style.display = "none";
+    //   document.getElementById('doc2').style.display = "none";
+    //   document.getElementById('TubeWeight').style.display = "none";
+    //   // document.getElementById('doc3').style.display = "none";
+    //   // document.getElementById('doc4').style.display = "block";
+    // }
   </script>
 
   <script>
