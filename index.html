@@ -1,96 +1,65 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Login page</title>
-    <link rel="stylesheet" href="./css/login.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
-
-
-
-    <input type="number" style="display: none;" id="tri" value=0 />
-    <form class="box">
-        <h1><label for="pswd">LOGIN</label></h1>
-        <input type="text" placeholder="Login" id="login">
-        <input type="password" placeholder="Password" id="pswd">
-        <input type="button" value="Submit" onclick="checkPswd();" />
-    </form>
-
-
-
-
-    <!--Function to check password the already set password is admin-->
-
-    <script type="text/javascript">
-        //дириктива, чтобы указать браузеру, что код должен работать в современном режиме 
-        "use strict";
-
-        // function checkPswd() {
-        //     const logins = ["Mango", "robotGoogles", "Poly", "Aj4x1sBozz", "qwerty123"];
-        //     let confirmPassword = "RWh5bGFnMjc=";
-        //     let password = document.getElementById("pswd").value;
-        //     let login = document.getElementById("login").value;
-        //     let incorPass = document.getElementById("tri").value;
-
-
-
-        //     //проверка на количество символов
-        //     if (login.length < 4 || login.length > 16) {
-        //         alert('Логин должен быть от 4 до 16 символов');
-        //         //проверка на совпадения
-        //         if (logins.includes == login) {
-        //             alert('Такого логина не существует!');
-        if (incorPass == 3) {
-            window.close();
-        }
-        //             if (password == window.atob(confirmPassword)) {
-        //                 window.location = window.atob("bWFpbi5odG1s");
-        //             } else {
-        //                 document.getElementById("tri").setAttribute('value', `${parseInt(incorPass)+1}`);
-        //                 var tries = 3 - incorPass;
-        //                 alert(`Не верный пароль. Осталось ${tries} попытки`);
-        //             }
-        //         }
-        //     }
-        // }
-
-
-        function checkPswd() {
-            var confirmPassword = "RWh5bGFnMjc=";
-            var password = document.getElementById("pswd").value;
-            var incorPass = document.getElementById("tri").value;
-            const logins = ["Mango", "robotGoogles", "Poly", "Aj4x1sBozz", "qwerty123"];
-            var login = document.getElementById("login").value;
-
-            if (login === ""){
-                alert("Введите логин");
-            } else {
-                if (logins.includes(login)) {
-                var tlogins = true;
-                } else {
-                alert('Такого логина не существует!');
-                }
-            }
-
-            if (password == window.atob(confirmPassword)) {
-                var tpass = true;
-                if ((tlogins) && (tpass)) {
-                    window.location = "main.html";
-                }
-            } else {
-                document.getElementById("tri").setAttribute('value', `${parseInt(incorPass)+1}`);
-                var tries = 3 - incorPass;
-                alert(`Не верный пароль. Осталось ${tries} попытки`);
-            }
-            if (incorPass == 3) {
-                document.querySelectorAll('form').forEach(form => form.remove());
-                window.close();
-                window.open("http://www.consultant.ru/document/cons_doc_LAW_10699/5c337673c261a026c476d578035ce68a0ae86da0/");
-            }
-        }
-    </script>
+    <header>
+        <nav>
+            <div class="nav container">
+                <div class="nav__logo"><p>Украденный Екатеринбург</p></div>
+                <div class="nav__icons">
+                    <img src="./img/iconfinder-media-network-social-internet-web-mobile-1-5863254.svg" alt="Vk">
+                    <img src="./img/iconfinder-media-network-social-internet-web-mobile-3-5863210.svg" alt="Fb">
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <h1 class="header__tittle">В Екатеринбурге <span>пропали</span></h1>
+        <p class="header__subtittle">12 участков земли площалью 1430 м<sup>2</sup></p>
+        </div>
+    </header>
+    <section>
+        <div class="map">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6966ddf2e780ac5c9dc08e983e265e1f395142750822e8932ca6756c3c30dd3b&amp;width=100%25&amp;height=596&amp;lang=ru_RU&amp;scroll=false"></script>
+        </div>
+    </section>
+    <section class="card container">
+        <div class="card__item">
+            <div class="card__text">
+                <h2>Угол Комсомольской и Малышева</h2>
+                <p>На углу улиц Комсомольская и Малышева, рядом с зданием аптеки есть незаконно отгорожена парковочная зона.</p>
+                <b><p>Площадь: 45 м²</p></b>
+            </div>
+            <div class="card__img">
+                <div class="img__item"></div>
+                <div class="img__item"></div>
+                <div class="img__item"></div>
+            </div>
+        </div>
+        <div class="card__item">
+            <div class="card__text">
+                <h2>Угол Комсомольской и Малышева</h2>
+                <p>На углу улиц Комсомольская и Малышева, рядом с зданием аптеки есть незаконно отгорожена парковочная зона.</p>
+                <b><p>Площадь: 45 м²</p></b>
+            </div>
+            <div class="card__img">
+                <div class="img__item"></div>
+                <div class="img__item"></div>
+                <div class="img__item"></div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <h1 class="footer__tittle">Украденный Екатеринбург</h1>
+            <p class="footer__subtittle">Цель проекта подстветить/поднять проблему захваченной земли.
+            Если ты передвигаешься по городу и неожиданно твой тротуар кончается, превращается в нечто неприятное или упирается в тупик, то скорее всего это потому, что кто-то озаборил/украл муниципальную землю.</p>
+    
+        </div>
+    </footer>
 </body>
-
 </html>

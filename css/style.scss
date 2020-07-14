@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+$--tomato: #f0473e;
+
+*{
+    margin: 0;padding: 0;
+}
+
+body{
+    font-family: 'PT Sans', sans-serif;
+}
+
+.container {
+    margin: 0 auto; 
+    @media (min-width: 320px) {
+        max-width: 90%; 
+    }
+    @media (min-width: 576px) {
+        max-width: 80%; 
+    }
+    @media (min-width: 768px) {
+        max-width: 80%; 
+    }
+    @media (min-width: 992px) {
+        max-width: 80%; 
+    }
+    @media (min-width: 1200px) {
+        max-width: 80%; 
+    }
+}
+nav{
+    background-color: #000000;
+}
+.nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+		&__logo {
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 1.5;
+            color: $--tomato;
+		}
+
+		&__icons {
+            display: flex;
+            img{
+                margin-left: 12px;
+            }
+		}
+}
+header{
+    background: url("/img/X.png") no-repeat;
+    background-position: 90% center;
+    background-size: 760px cover;
+    background-clip: 720px;
+}
+.header {
+		&__tittle {
+            padding-top: 268px;
+            font-size: 72px;
+            font-weight: bold;
+            line-height: 1.53;
+            color: #000000;
+            span{
+                color: $--tomato;
+            }
+		}
+		&__subtittle {
+            font-size: 36px;
+            color: $--tomato;
+            padding-bottom: 354px;
+		}
+}
+
+.map{
+    padding-bottom: 85px;
+}
+
+.card {
+		&__item {
+            margin-bottom: 35px;
+            display: flex;
+            justify-content: flex-start;
+            h2{
+                font-size: 24px;
+                font-weight: bold;
+                color: #000000;
+            }
+            p{
+                // width: 385px;
+                font-size: 18px;
+                line-height: 1.6;
+                color: #000000;
+                margin: 13px 0;
+            }
+        }
+
+        &__text{
+            align-self: center;
+        }
+        &__img {
+            display: flex;
+        }
+}
+.img {
+		&__item {
+            width: 253px;
+            height: 242px;
+            margin-left: 16px;
+            background: url("/img/city.jpg") center / cover no-repeat;
+		}
+}
+.footer {
+    background-color: #000;
+		&__tittle {
+            color: #fff;
+            font-size: 72px;
+            font-weight: bold;
+            line-height: 1.6;
+            padding-top: 67px;
+            padding-bottom: 11px;
+		}
+		&__subtittle {
+            color: #fff;
+            font-size: 21px;
+            line-height: 1.6;
+            padding-bottom: 53px;
+		}
+}
