@@ -1,2 +1,0 @@
-# SheerGeyser.github.io
-tajam

@@ -1,152 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Калькулятор зарплаты</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input {
+            margin-top: 5px;
+            padding: 5px;
+            width: 200px;
+        }
+
+        .penalty {
+            margin-top: 5px;
+        }
+
+        .penalty input {
+            margin-left: 5px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #difference {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-<div class="scene">
-<div class="main">
-<div id="quiz-container main">
-    <div id="question-container"></div>
-    <div id="options-container"></div>
-    <button id="next-button" style="display: none;">Next</button>
-</div>
-</div>
-</div>
+<h1>Калькулятор зарплаты</h1>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const questions = [
-            {
-                question: "Да",
-                options: ["пизда", "нет", "я что ебу?", "что да?"],
-                correctAnswer: "пизда"
-            },
-            {
-                question: "Нет",
-                options: ["Пидора ответ", "А нормальные вопросы будут?", "Нет", "Да"],
-                correctAnswer: "А нормальные вопросы будут?"
-            },
-            {
-                question: "Когда жига перестанет ломаться?",
-                options: ["без этого скучно", "никогда", "«Да ща немного осталось, сделаю и она вообще летать начнёт»", "Я хуй его знакт"],
-                correctAnswer: "«Да ща немного осталось, сделаю и она вообще летать начнёт»"
-            },
-            {
-                question: "В жопу дашь или Пашу продашь?",
-                options: ["Пашу продам", "Продам гараж ", "Оба варианта", "В жопу дам"],
-                correctAnswer: "В жопу дам"
-            },
-            {
-                question: "Твоя любимая страна по авто производству?",
-                options: ["Корея", "Корея", "Корея", "РОССИЯ СВЯЩЕННАЯ НАША ДЕРЖАВА "],
-                correctAnswer: "Корея"
-            },
-            {
-                question: "Когда познакомишь с мамой?",
-                options: ["Никогда", "Ну ты и хуйло", "Ну это же мама", "ВААБЩЕ ПАХУЮ"],
-                correctAnswer: "ВААБЩЕ ПАХУЮ"
-            },
-            {
-                question: "Сколько весит жига во Владиках? (За единицу измерения берётся масса тела Влада)",
-                options: ["Дохуя", "1 к 1", "2", "Считать надо"],
-                correctAnswer: "Считать надо"
-            },
-            {
-                question: " Когда на «РДС»?",
-                options: ["ДА", "Да как ты заебал", "Как только так сразу", "Не травите душу"],
-                correctAnswer: "ДА"
-            },
-            {
-                question: "В чём разница дерева от травы?",
-                options: ["Мать ебал", "Нет разницы", "Сколько ты зарабатываешь?", "«Ну дерево деревянное, а трава зелёная. Вы чо тупые?»"],
-                correctAnswer: "Мать ебал"
-            },
-            {
-                question: "Кто убил Марка?",
-                options: ["его убила марка", "Гитлер", "Евреи", "Жиган"],
-                correctAnswer: "его убила марка"
-            },
-            {
-                question: "Когда жига перестанет ломаться?",
-                options: ["без этого скучно", "никогда", "«Да ща немного осталось, сделаю и она вообще летать начнёт»", "Я хуй его знакт"],
-                correctAnswer: "«Да ща немного осталось, сделаю и она вообще летать начнёт»"
-            },
-            {
-                question: "Твой любимый фрукт?",
-                options: ["Масло", "Сженное сцепление", "Собака в снегу", "Хуй"],
-                correctAnswer: "Собака в снегу"
-            },
-            {
-                question: "Чья движка отъебнет раньше?",
-                options: ["Жиги", "Никиты"],
-                correctAnswer: "Никиты"
-            },
-            {
-                question: "Самая высокая гора до открытия эвереста",
-                options: ["Гемалаи", "Леонас", "Эверест", "Хуй Павла в трусиках"],
-                correctAnswer: "Эверест"
-            },
-            {
-                question: "Какой нации Павел",
-                options: ["Русский", "Укроп", "Еврей", "Гномик"],
-                correctAnswer: "Еврей"
-            },
-        ];
+<label for="cash">Наличка:</label>
+<input type="number" id="cash" value="0">
 
-        let currentQuestion = 0;
+<label for="advance">Аванс:</label>
+<input type="number" id="advance" value="0">
 
-        function loadQuestion() {
-            const questionContainer = document.getElementById("question-container");
-            const optionsContainer = document.getElementById("options-container");
-            const nextButton = document.getElementById("next-button");
+<label for="card">На карту:</label>
+<input type="number" id="card" value="0">
 
-            questionContainer.textContent = questions[currentQuestion].question;
+<label for="badge">Сумма трат по бейджику:</label>
+<input type="number" id="badge" value="0">
 
-            optionsContainer.innerHTML = "";
-            questions[currentQuestion].options.forEach((option, index) => {
-                const button = document.createElement("button");
-                button.className = "outline purple-white"
-                button.textContent = option;
-                button.addEventListener("click", () => checkAnswer(option));
-                optionsContainer.appendChild(button);
-            });
+<label for="expectedSalary">Ожидаемая зарплата:</label>
+<input type="number" id="expectedSalary" value="0">
 
-            nextButton.style.display = "none";
-        }
+<h3>Штрафы:</h3>
+<div id="penalties"></div>
 
-        function checkAnswer(selectedAnswer) {
-            const nextButton = document.getElementById("next-button");
+<button id="addPenalty">Добавить штраф</button>
 
-            if (selectedAnswer === questions[currentQuestion].correctAnswer) {
-                nextQuestion();
-            } else {
-                if (Math.random() < 0.05) {
-                    // 10% chance of redirecting to the specified YouTube video
-                    window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-                } else {
-                    alert("Не повезло, попробуй снова:(((");
-                    loadQuestion();
-                }
-            }
-        }
+<h2>Итоговая зарплата: <span id="totalSalary">0</span> руб.</h2>
+<div id="difference"></div>
 
-        function nextQuestion() {
-            currentQuestion++;
-            if (currentQuestion < questions.length) {
-                loadQuestion();
-            } else {
-                window.location.href = "/fake.html";
-            }
-        }
-
-        document.getElementById("next-button").addEventListener("click", nextQuestion);
-        loadQuestion();
-    });
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
