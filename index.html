@@ -3,34 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Калькулятор зарплаты</title>
+    <title>Калькулятор ЗП</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            padding: 20px;
         }
 
-        label {
-            display: block;
-            margin-top: 10px;
+        .container {
+            max-width: 300px;
+            margin: 0 auto;
         }
 
         input {
-            margin-top: 5px;
-            padding: 5px;
-            width: 200px;
-        }
-
-        .penalty {
-            margin-top: 5px;
-        }
-
-        .penalty input {
-            margin-left: 5px;
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
         }
 
         button {
-            margin-top: 15px;
+            width: 100%;
             padding: 10px;
             background-color: #4CAF50;
             color: white;
@@ -42,38 +34,39 @@
             background-color: #45a049;
         }
 
-        #difference {
-            margin-top: 10px;
-            font-weight: bold;
+        .result {
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-<h1>Калькулятор зарплаты</h1>
 
-<label for="cash">Наличка:</label>
-<input type="number" id="cash" value="0">
+<div class="container">
+    <h2>Калькулятор ЗП</h2>
 
-<label for="advance">Аванс:</label>
-<input type="number" id="advance" value="0">
+    <label for="cash">Наличкой:</label>
+    <input type="number" id="cash" placeholder="Введите сумму наличкой">
 
-<label for="card">На карту:</label>
-<input type="number" id="card" value="0">
+    <label for="card">На карту:</label>
+    <input type="number" id="card" placeholder="Введите сумму на карту">
 
-<label for="badge">Сумма трат по бейджику:</label>
-<input type="number" id="badge" value="0">
+    <label for="advance">Аванс:</label>
+    <input type="number" id="advance" placeholder="Введите сумму аванса">
 
-<label for="expectedSalary">Ожидаемая зарплата:</label>
-<input type="number" id="expectedSalary" value="0">
+    <label for="badgeExpenses">Траты по бейджику:</label>
+    <input type="number" id="badgeExpenses" placeholder="Введите траты по бейджику">
 
-<h3>Штрафы:</h3>
-<div id="penalties"></div>
+    <label for="expectedSalary">Ожидаемая ЗП:</label>
+    <input type="number" id="expectedSalary" placeholder="Введите ожидаемую ЗП">
 
-<button id="addPenalty">Добавить штраф</button>
+    <button onclick="calculate()">Рассчитать</button>
 
-<h2>Итоговая зарплата: <span id="totalSalary">0</span> руб.</h2>
-<div id="difference"></div>
+    <div class="result">
+        <p id="receivedMoney">Получено денег: 0</p>
+        <p id="missingMoney">Недостает: 0</p>
+    </div>
+</div>
 
-<script src="script.js"></script>
+<script src="calculator.js"></script>
 </body>
 </html>
